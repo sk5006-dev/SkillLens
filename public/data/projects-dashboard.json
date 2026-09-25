@@ -1,0 +1,616 @@
+{
+  "portfolioReadiness": {
+    "score": 84,
+    "status": "Strong Engineering Evidence",
+    "summary": "Your strongest evidence comes from active Go, TypeScript, and backend microservice architectures.",
+    "strongEvidence": ["TypeScript", "React", "Node.js", "Go", "Docker", "API Design"],
+    "needsEvidence": ["Kubernetes", "Automated Integration Testing", "System Design Documentation"],
+    "metrics": {
+      "projectsAnalyzed": 5,
+      "technologiesDetected": 18,
+      "repositoriesVerified": 4,
+      "lastSynced": "10 minutes ago"
+    }
+  },
+  "projects": [
+    {
+      "id": "api-gateway",
+      "name": "api-gateway",
+      "description": "High-throughput API routing and authentication proxy with rate limiting and telemetry middleware.",
+      "repository": "github.com/pranav-dev/api-gateway",
+      "visibility": "public",
+      "primaryLanguage": "Go",
+      "technologies": ["Go", "TypeScript", "Docker", "Node.js", "PostgreSQL", "Redis"],
+      "stars": 24,
+      "forks": 6,
+      "commits": 48,
+      "pullRequests": 14,
+      "filesChanged": 128,
+      "lastUpdated": "2 days ago",
+      "verification": {
+        "score": 94,
+        "status": "Verified",
+        "confidence": 96,
+        "evidenceCount": 12
+      },
+      "technicalDepth": {
+        "complexity": 92,
+        "architecture": 94,
+        "codeQuality": 95,
+        "testing": 78,
+        "documentation": 82,
+        "activity": 90
+      },
+      "whatThisProjectProves": [
+        "High-performance concurrent API proxy design in Go",
+        "Distributed rate limiting with Redis sliding-window algorithms",
+        "Multi-stage Docker containerization and CI/CD pipelines",
+        "JWT token validation and OAuth 2.0 security middleware",
+        "Structured logging, Prometheus metrics, and distributed tracing"
+      ],
+      "technologyEvidence": [
+        {
+          "technology": "Go",
+          "status": "Verified",
+          "confidence": 98,
+          "evidence": [
+            {
+              "repository": "api-gateway",
+              "filePath": "cmd/server/main.go",
+              "commit": "c48a19",
+              "commitMessage": "Implement concurrent reverse proxy request router",
+              "detectedPattern": "goroutines, net/http/httputil reverse proxy",
+              "explanation": "Core server initializes concurrent Go HTTP handlers with custom connection pools."
+            },
+            {
+              "repository": "api-gateway",
+              "filePath": "internal/middleware/ratelimit.go",
+              "commit": "f12e8b",
+              "commitMessage": "Add token bucket rate limiter with Redis backend",
+              "detectedPattern": "sync.Mutex, channel synchronization",
+              "explanation": "Custom synchronization primitives managing concurrent request budgets."
+            }
+          ]
+        },
+        {
+          "technology": "Docker",
+          "status": "Verified",
+          "confidence": 96,
+          "evidence": [
+            {
+              "repository": "api-gateway",
+              "filePath": "Dockerfile",
+              "commit": "a91f2c",
+              "commitMessage": "Add multi-stage production Alpine build",
+              "detectedPattern": "Multi-stage Docker build, unprivileged user",
+              "explanation": "Production containerization directly detected from multi-stage build manifest."
+            },
+            {
+              "repository": "api-gateway",
+              "filePath": "docker-compose.yml",
+              "commit": "e83d10",
+              "commitMessage": "Configure local cluster with Redis and Prometheus",
+              "detectedPattern": "Compose v3 service definitions, bridge networks",
+              "explanation": "Local multi-container development environment orchestrating gateway, cache, and metrics."
+            }
+          ]
+        },
+        {
+          "technology": "TypeScript",
+          "status": "Verified",
+          "confidence": 94,
+          "evidence": [
+            {
+              "repository": "api-gateway",
+              "filePath": "sdk/client/src/index.ts",
+              "commit": "b72a04",
+              "commitMessage": "Export typed client SDK with retry policies",
+              "detectedPattern": "Strict TypeScript interfaces, generics",
+              "explanation": "Full client SDK generated and maintained with strict TypeScript type definitions."
+            }
+          ]
+        },
+        {
+          "technology": "Redis",
+          "status": "Strong Evidence",
+          "confidence": 90,
+          "evidence": [
+            {
+              "repository": "api-gateway",
+              "filePath": "internal/cache/redis.go",
+              "commit": "d90e34",
+              "commitMessage": "Integrate Redis connection pool for rate limiter state",
+              "detectedPattern": "go-redis/v9 client, pipeline commands",
+              "explanation": "Connection pooling and pipelined key operations validated in middleware cache layer."
+            }
+          ]
+        }
+      ],
+      "architectureSignals": [
+        { "signal": "API Architecture", "status": "Detected", "evidencePath": "internal/router/routes.go", "explanation": "Clean router separation with versioned /v1 endpoint groups." },
+        { "signal": "Database Layer", "status": "Detected", "evidencePath": "internal/store/postgres.go", "explanation": "PostgreSQL connection pool with parameterized queries and migrations." },
+        { "signal": "Containerization", "status": "Detected", "evidencePath": "Dockerfile", "explanation": "Multi-stage build compiling Go binary into scratch container." },
+        { "signal": "CI/CD", "status": "Detected", "evidencePath": ".github/workflows/ci.yml", "explanation": "Automated linting, unit tests, and container registry publishing." },
+        { "signal": "Caching", "status": "Detected", "evidencePath": "internal/cache/redis.go", "explanation": "Redis sliding-window rate limit store and response caching." },
+        { "signal": "Observability", "status": "Detected", "evidencePath": "internal/telemetry/metrics.go", "explanation": "Prometheus metric exporters for HTTP request latency and error rates." },
+        { "signal": "Testing", "status": "Partial", "evidencePath": "internal/router/routes_test.go", "explanation": "Unit tests present for router logic (68% coverage); end-to-end integration suite needed." },
+        { "signal": "Documentation", "status": "Detected", "evidencePath": "README.md & docs/architecture.md", "explanation": "Comprehensive architecture diagrams, benchmark numbers, and deployment guides." }
+      ],
+      "contributionMetrics": {
+        "commits": 48,
+        "pullRequests": 14,
+        "filesChanged": 128,
+        "consistencyScore": 92,
+        "recentActivityLevel": "High",
+        "recentCommits": [
+          { "hash": "c48a19", "message": "Implement concurrent reverse proxy request router", "date": "2 days ago", "author": "Pranav" },
+          { "hash": "f12e8b", "message": "Add token bucket rate limiter with Redis backend", "date": "4 days ago", "author": "Pranav" },
+          { "hash": "a91f2c", "message": "Add multi-stage production Alpine build", "date": "1 week ago", "author": "Pranav" },
+          { "hash": "b72a04", "message": "Export typed client SDK with retry policies", "date": "2 weeks ago", "author": "Pranav" }
+        ]
+      },
+      "strengths": [
+        "High-performance Go concurrency patterns with benchmarked latency profiles.",
+        "Production-ready containerization and automated GitHub Actions CI/CD workflows.",
+        "Comprehensive architectural documentation with clear request lifecycle diagrams."
+      ],
+      "weaknesses": [
+        "Integration test coverage is currently 68%; lacks automated load testing scripts."
+      ],
+      "nextBestAction": {
+        "id": "act-gateway-1",
+        "title": "Add automated integration test suite",
+        "impact": "High",
+        "why": "Testing evidence is currently the only partial signal in this project's otherwise outstanding verification profile.",
+        "potentialImpact": "Verification score 94% -> 98%",
+        "actionLabel": "Improve Testing",
+        "secondaryRecommendations": [
+          {
+            "id": "act-gateway-2",
+            "title": "Add OpenTelemetry distributed tracing spans",
+            "impact": "Medium",
+            "why": "Strengthens observability evidence for senior distributed systems roles."
+          },
+          {
+            "id": "act-gateway-3",
+            "title": "Publish k6 benchmark scripts in repo",
+            "impact": "Low",
+            "why": "Provides reproducible proof of throughput benchmarks under concurrency."
+          }
+        ]
+      }
+    },
+    {
+      "id": "react-dashboard",
+      "name": "react-dashboard",
+      "description": "Real-time analytics portal with responsive telemetry charts, WebSocket streaming, and role-based access control.",
+      "repository": "github.com/pranav-dev/react-dashboard",
+      "visibility": "public",
+      "primaryLanguage": "TypeScript",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "WebSockets"],
+      "stars": 19,
+      "forks": 4,
+      "commits": 96,
+      "pullRequests": 22,
+      "filesChanged": 210,
+      "lastUpdated": "3 days ago",
+      "verification": {
+        "score": 91,
+        "status": "Verified",
+        "confidence": 94,
+        "evidenceCount": 16
+      },
+      "technicalDepth": {
+        "complexity": 88,
+        "architecture": 91,
+        "codeQuality": 94,
+        "testing": 82,
+        "documentation": 89,
+        "activity": 94
+      },
+      "whatThisProjectProves": [
+        "Advanced React 19 / Next.js 14 App Router state architecture",
+        "Strict TypeScript type safety and shared data contracts",
+        "Real-time WebSocket streaming telemetry visualization",
+        "Modern CSS systems with zero-runtime Tailwind styling",
+        "Client-side caching and optimistic UI updates"
+      ],
+      "technologyEvidence": [
+        {
+          "technology": "React",
+          "status": "Verified",
+          "confidence": 98,
+          "evidence": [
+            {
+              "repository": "react-dashboard",
+              "filePath": "src/components/charts/TelemetryGrid.tsx",
+              "commit": "8f31b2",
+              "commitMessage": "Refactor chart grid with virtualized canvas rendering",
+              "detectedPattern": "useMemo, useCallback, custom hooks",
+              "explanation": "High-frequency render optimizations managing 60fps streaming metric charts."
+            }
+          ]
+        },
+        {
+          "technology": "Next.js",
+          "status": "Verified",
+          "confidence": 96,
+          "evidence": [
+            {
+              "repository": "react-dashboard",
+              "filePath": "src/app/(dashboard)/analytics/page.tsx",
+              "commit": "4e19d0",
+              "commitMessage": "Implement Server Component data fetching with Suspense",
+              "detectedPattern": "Next.js App Router, Server Components",
+              "explanation": "Hybrid SSR and client streaming architectures validated in app directory layout."
+            }
+          ]
+        },
+        {
+          "technology": "TypeScript",
+          "status": "Verified",
+          "confidence": 95,
+          "evidence": [
+            {
+              "repository": "react-dashboard",
+              "filePath": "src/types/telemetry.d.ts",
+              "commit": "a102ef",
+              "commitMessage": "Define immutable telemetry event union types",
+              "detectedPattern": "Discriminated unions, branded types",
+              "explanation": "Comprehensive TypeScript typing preventing invalid UI runtime states."
+            }
+          ]
+        }
+      ],
+      "architectureSignals": [
+        { "signal": "API Architecture", "status": "Detected", "evidencePath": "src/lib/api-client.ts", "explanation": "Typed fetch client wrapper with automatic token refresh." },
+        { "signal": "Database Layer", "status": "Needs Evidence", "evidencePath": "N/A", "explanation": "Client frontend application; data persistence managed via external APIs." },
+        { "signal": "Containerization", "status": "Detected", "evidencePath": "Dockerfile", "explanation": "Multi-stage standalone Next.js production build container." },
+        { "signal": "CI/CD", "status": "Detected", "evidencePath": ".github/workflows/deploy.yml", "explanation": "Automated Vercel preview deployments and Playwright E2E suites." },
+        { "signal": "Caching", "status": "Detected", "evidencePath": "src/lib/cache.ts", "explanation": "SWR/React Query optimistic local caching layer." },
+        { "signal": "Observability", "status": "Detected", "evidencePath": "src/lib/analytics.ts", "explanation": "Core Web Vitals telemetry tracking and client error boundaries." },
+        { "signal": "Testing", "status": "Detected", "evidencePath": "tests/dashboard.spec.ts", "explanation": "Playwright end-to-end integration tests covering core dashboard flows." },
+        { "signal": "Documentation", "status": "Detected", "evidencePath": "README.md & STORYBOOK.md", "explanation": "Component documentation and design system token references." }
+      ],
+      "contributionMetrics": {
+        "commits": 96,
+        "pullRequests": 22,
+        "filesChanged": 210,
+        "consistencyScore": 95,
+        "recentActivityLevel": "Very High",
+        "recentCommits": [
+          { "hash": "8f31b2", "message": "Refactor chart grid with virtualized canvas rendering", "date": "3 days ago", "author": "Pranav" },
+          { "hash": "4e19d0", "message": "Implement Server Component data fetching with Suspense", "date": "1 week ago", "author": "Pranav" },
+          { "hash": "a102ef", "message": "Define immutable telemetry event union types", "date": "2 weeks ago", "author": "Pranav" }
+        ]
+      },
+      "strengths": [
+        "High commit volume with clean modular React component boundaries.",
+        "Production-grade Next.js 14 App Router patterns with Suspense boundaries.",
+        "Automated Playwright end-to-end test suite."
+      ],
+      "weaknesses": [
+        "Relies purely on mock WebSocket server for local development testing."
+      ],
+      "nextBestAction": {
+        "id": "act-react-1",
+        "title": "Add Storybook component test catalog",
+        "impact": "Medium",
+        "why": "Visual regression tests and documented Storybook stories increase frontend architecture proof.",
+        "potentialImpact": "Verification score 91% -> 95%",
+        "actionLabel": "Add Storybook",
+        "secondaryRecommendations": [
+          {
+            "id": "act-react-2",
+            "title": "Add Lighthouse CI performance budget workflow",
+            "impact": "Medium",
+            "why": "Enforces 95+ Core Web Vitals scores in pull request checks."
+          }
+        ]
+      }
+    },
+    {
+      "id": "distributed-cache",
+      "name": "distributed-cache",
+      "description": "In-memory distributed key-value store with consistent hashing, Raft leader election, and Redis wire protocol support.",
+      "repository": "github.com/pranav-dev/distributed-cache",
+      "visibility": "public",
+      "primaryLanguage": "Go",
+      "technologies": ["Go", "gRPC", "Docker", "Raft", "Distributed Systems"],
+      "stars": 38,
+      "forks": 9,
+      "commits": 34,
+      "pullRequests": 8,
+      "filesChanged": 92,
+      "lastUpdated": "1 week ago",
+      "verification": {
+        "score": 86,
+        "status": "Strong Evidence",
+        "confidence": 88,
+        "evidenceCount": 9
+      },
+      "technicalDepth": {
+        "complexity": 96,
+        "architecture": 92,
+        "codeQuality": 89,
+        "testing": 74,
+        "documentation": 76,
+        "activity": 80
+      },
+      "whatThisProjectProves": [
+        "Distributed consensus implementation via Raft algorithm",
+        "Consistent hashing ring with dynamic node join/leave rebalancing",
+        "Low-level TCP protocol parser supporting Redis RESP format",
+        "Memory-efficient concurrent skip-list and LRU eviction engines",
+        "Cluster peer discovery and heartbeat failure detectors"
+      ],
+      "technologyEvidence": [
+        {
+          "technology": "Go",
+          "status": "Verified",
+          "confidence": 96,
+          "evidence": [
+            {
+              "repository": "distributed-cache",
+              "filePath": "pkg/raft/node.go",
+              "commit": "e3091c",
+              "commitMessage": "Implement election timeout randomized election tickers",
+              "detectedPattern": "time.Ticker, select channels, atomic counters",
+              "explanation": "Raft state machine transitions (Follower, Candidate, Leader) cleanly implemented."
+            }
+          ]
+        },
+        {
+          "technology": "gRPC",
+          "status": "Verified",
+          "confidence": 92,
+          "evidence": [
+            {
+              "repository": "distributed-cache",
+              "filePath": "proto/raft.proto",
+              "commit": "7b82df",
+              "commitMessage": "Define RequestVote and AppendEntries gRPC schemas",
+              "detectedPattern": "Protocol Buffers v3, streaming RPCs",
+              "explanation": "Inter-node communication schemas strongly defined with Protobuf interfaces."
+            }
+          ]
+        }
+      ],
+      "architectureSignals": [
+        { "signal": "API Architecture", "status": "Detected", "evidencePath": "pkg/resp/server.go", "explanation": "Raw TCP listener implementing RESP wire protocol." },
+        { "signal": "Database Layer", "status": "Detected", "evidencePath": "pkg/engine/skiplist.go", "explanation": "Concurrent lock-free skip list storage engine." },
+        { "signal": "Containerization", "status": "Detected", "evidencePath": "Dockerfile", "explanation": "Alpine container build for single and cluster node deployments." },
+        { "signal": "CI/CD", "status": "Detected", "evidencePath": ".github/workflows/test.yml", "explanation": "Race detector tests on pull requests (`go test -race ./...`)." },
+        { "signal": "Caching", "status": "Detected", "evidencePath": "pkg/engine/lru.go", "explanation": "Core storage engine implements TTL eviction and LRU pruning." },
+        { "signal": "Observability", "status": "Partial", "evidencePath": "pkg/metrics/exporter.go", "explanation": "Basic internal metric counters; needs external Prometheus export endpoint." },
+        { "signal": "Testing", "status": "Partial", "evidencePath": "pkg/raft/node_test.go", "explanation": "Leader election tests present; network partition chaos testing needed." },
+        { "signal": "Documentation", "status": "Partial", "evidencePath": "README.md", "explanation": "High-level overview provided; detailed protocol specifications needed." }
+      ],
+      "contributionMetrics": {
+        "commits": 34,
+        "pullRequests": 8,
+        "filesChanged": 92,
+        "consistencyScore": 84,
+        "recentActivityLevel": "Moderate",
+        "recentCommits": [
+          { "hash": "e3091c", "message": "Implement election timeout randomized election tickers", "date": "1 week ago", "author": "Pranav" },
+          { "hash": "7b82df", "message": "Define RequestVote and AppendEntries gRPC schemas", "date": "2 weeks ago", "author": "Pranav" }
+        ]
+      },
+      "strengths": [
+        "Exceptional technical complexity demonstrating deep distributed systems fundamentals.",
+        "Clean Go concurrency with race-condition detection in CI."
+      ],
+      "weaknesses": [
+        "Lacks automated Jepsen or Chaos Mesh partition testing."
+      ],
+      "nextBestAction": {
+        "id": "act-cache-1",
+        "title": "Add network partition cluster simulation tests",
+        "impact": "High",
+        "why": "Demonstrating split-brain recovery and quorum safety cements top-tier distributed systems credibility.",
+        "potentialImpact": "Verification score 86% -> 94%",
+        "actionLabel": "Add Chaos Tests",
+        "secondaryRecommendations": [
+          {
+            "id": "act-cache-2",
+            "title": "Add Prometheus metrics endpoint",
+            "impact": "Medium",
+            "why": "Exposes live cache hit/miss and replication lag metrics."
+          }
+        ]
+      }
+    },
+    {
+      "id": "task-orchestrator",
+      "name": "task-orchestrator",
+      "description": "Distributed background job scheduler with exponential retry backoff, dead-letter queues, and PostgreSQL persistence.",
+      "repository": "github.com/pranav-dev/task-orchestrator",
+      "visibility": "public",
+      "primaryLanguage": "TypeScript",
+      "technologies": ["TypeScript", "Node.js", "PostgreSQL", "Docker", "BullMQ"],
+      "stars": 15,
+      "forks": 2,
+      "commits": 42,
+      "pullRequests": 10,
+      "filesChanged": 114,
+      "lastUpdated": "2 weeks ago",
+      "verification": {
+        "score": 88,
+        "status": "Strong Evidence",
+        "confidence": 90,
+        "evidenceCount": 10
+      },
+      "technicalDepth": {
+        "complexity": 86,
+        "architecture": 90,
+        "codeQuality": 91,
+        "testing": 84,
+        "documentation": 80,
+        "activity": 85
+      },
+      "whatThisProjectProves": [
+        "Fault-tolerant worker queue and job orchestration architecture",
+        "PostgreSQL transaction management and advisory locking",
+        "Exponential backoff retry policies and dead-letter queue isolation",
+        "Graceful process shutdown and worker thread pool scaling"
+      ],
+      "technologyEvidence": [
+        {
+          "technology": "PostgreSQL",
+          "status": "Verified",
+          "confidence": 94,
+          "evidence": [
+            {
+              "repository": "task-orchestrator",
+              "filePath": "src/db/migrations/001_tasks_schema.sql",
+              "commit": "6a9012",
+              "commitMessage": "Add task queue schema with advisory lock indices",
+              "detectedPattern": "SQL migrations, indexed state columns, SKIP LOCKED",
+              "explanation": "Concurrent queue consumption using PostgreSQL FOR UPDATE SKIP LOCKED queries."
+            }
+          ]
+        },
+        {
+          "technology": "Node.js",
+          "status": "Verified",
+          "confidence": 95,
+          "evidence": [
+            {
+              "repository": "task-orchestrator",
+              "filePath": "src/workers/processor.ts",
+              "commit": "3b18fa",
+              "commitMessage": "Implement worker pool with concurrency throttling",
+              "detectedPattern": "worker_threads, EventEmitter",
+              "explanation": "Multi-threaded worker pool executing background tasks concurrently."
+            }
+          ]
+        }
+      ],
+      "architectureSignals": [
+        { "signal": "API Architecture", "status": "Detected", "evidencePath": "src/server.ts", "explanation": "REST control plane for enqueueing jobs and monitoring status." },
+        { "signal": "Database Layer", "status": "Detected", "evidencePath": "src/db/client.ts", "explanation": "PostgreSQL persistence with connection pooling and schema migrations." },
+        { "signal": "Containerization", "status": "Detected", "evidencePath": "Dockerfile", "explanation": "Dockerized worker and scheduler services with health checks." },
+        { "signal": "CI/CD", "status": "Detected", "evidencePath": ".github/workflows/ci.yml", "explanation": "PostgreSQL test container integration in GitHub Actions." },
+        { "signal": "Caching", "status": "Partial", "evidencePath": "src/cache/local.ts", "explanation": "In-memory status cache; Redis backend planned." },
+        { "signal": "Observability", "status": "Detected", "evidencePath": "src/metrics/logger.ts", "explanation": "Structured JSON logging and job failure telemetry." },
+        { "signal": "Testing", "status": "Detected", "evidencePath": "tests/queue.test.ts", "explanation": "Jest test suite verifying retry backoff and dead letter routing." },
+        { "signal": "Documentation", "status": "Detected", "evidencePath": "README.md", "explanation": "Complete API documentation and PostgreSQL schema definitions." }
+      ],
+      "contributionMetrics": {
+        "commits": 42,
+        "pullRequests": 10,
+        "filesChanged": 114,
+        "consistencyScore": 88,
+        "recentActivityLevel": "Moderate",
+        "recentCommits": [
+          { "hash": "6a9012", "message": "Add task queue schema with advisory lock indices", "date": "2 weeks ago", "author": "Pranav" },
+          { "hash": "3b18fa", "message": "Implement worker pool with concurrency throttling", "date": "3 weeks ago", "author": "Pranav" }
+        ]
+      },
+      "strengths": [
+        "Excellent real-world database concurrency pattern with PostgreSQL SKIP LOCKED.",
+        "Robust error isolation with automated dead-letter queues."
+      ],
+      "weaknesses": [
+        "Lacks a visual administrative dashboard for inspecting queue depths."
+      ],
+      "nextBestAction": {
+        "id": "act-task-1",
+        "title": "Implement Redis BullMQ clustered backend",
+        "impact": "Medium",
+        "why": "Proves multi-tier storage architecture and reduces PostgreSQL write contention under heavy load.",
+        "potentialImpact": "Verification score 88% -> 93%",
+        "actionLabel": "Add Redis Backend",
+        "secondaryRecommendations": []
+      }
+    },
+    {
+      "id": "portfolio-web",
+      "name": "portfolio-web",
+      "description": "Personal developer portfolio and technical blog built with Next.js static generation and MDX.",
+      "repository": "github.com/pranav-dev/portfolio-web",
+      "visibility": "public",
+      "primaryLanguage": "TypeScript",
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "MDX"],
+      "stars": 8,
+      "forks": 1,
+      "commits": 28,
+      "pullRequests": 4,
+      "filesChanged": 64,
+      "lastUpdated": "1 month ago",
+      "verification": {
+        "score": 82,
+        "status": "Strong Evidence",
+        "confidence": 86,
+        "evidenceCount": 6
+      },
+      "technicalDepth": {
+        "complexity": 76,
+        "architecture": 84,
+        "codeQuality": 88,
+        "testing": 70,
+        "documentation": 85,
+        "activity": 72
+      },
+      "whatThisProjectProves": [
+        "Static site generation (SSG) with incremental static regeneration",
+        "MDX integration for technical engineering articles",
+        "Responsive accessibility standards with semantic HTML",
+        "SEO optimization and OpenGraph dynamic card generation"
+      ],
+      "technologyEvidence": [
+        {
+          "technology": "Next.js",
+          "status": "Verified",
+          "confidence": 94,
+          "evidence": [
+            {
+              "repository": "portfolio-web",
+              "filePath": "next.config.js",
+              "commit": "1a49ec",
+              "commitMessage": "Configure MDX page extensions and image domains",
+              "detectedPattern": "next/mdx plugins",
+              "explanation": "Static generation pipeline parsing markdown engineering writeups."
+            }
+          ]
+        }
+      ],
+      "architectureSignals": [
+        { "signal": "API Architecture", "status": "Needs Evidence", "evidencePath": "N/A", "explanation": "Static frontend site." },
+        { "signal": "Database Layer", "status": "Needs Evidence", "evidencePath": "N/A", "explanation": "File-based MDX storage." },
+        { "signal": "Containerization", "status": "Needs Evidence", "evidencePath": "N/A", "explanation": "Vercel edge deployment." },
+        { "signal": "CI/CD", "status": "Detected", "evidencePath": ".github/workflows/lighthouse.yml", "explanation": "Automated Lighthouse audit tests on every pull request." },
+        { "signal": "Caching", "status": "Detected", "evidencePath": "src/lib/content.ts", "explanation": "Static asset caching with Next.js ISR." },
+        { "signal": "Observability", "status": "Detected", "evidencePath": "src/app/layout.tsx", "explanation": "Web Vitals analytics and Google Tag Manager." },
+        { "signal": "Testing", "status": "Partial", "evidencePath": "tests/a11y.test.ts", "explanation": "Automated axe-core accessibility compliance tests." },
+        { "signal": "Documentation", "status": "Detected", "evidencePath": "README.md", "explanation": "Clean setup instructions and content authoring guides." }
+      ],
+      "contributionMetrics": {
+        "commits": 28,
+        "pullRequests": 4,
+        "filesChanged": 64,
+        "consistencyScore": 76,
+        "recentActivityLevel": "Low",
+        "recentCommits": [
+          { "hash": "1a49ec", "message": "Configure MDX page extensions and image domains", "date": "1 month ago", "author": "Pranav" }
+        ]
+      },
+      "strengths": [
+        "Clean, responsive static site generation with 100/100 Lighthouse performance scores."
+      ],
+      "weaknesses": [
+        "Lower technical complexity compared to backend and distributed systems repositories."
+      ],
+      "nextBestAction": {
+        "id": "act-port-1",
+        "title": "Add dynamic interactive WebGL architecture visualizer",
+        "impact": "Low",
+        "why": "Showcases advanced graphics and client performance capabilities.",
+        "potentialImpact": "Verification score 82% -> 86%",
+        "actionLabel": "Add Visualizer",
+        "secondaryRecommendations": []
+      }
+    }
+  ]
+}

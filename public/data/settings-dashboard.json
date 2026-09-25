@@ -1,0 +1,47 @@
+{
+  "profile": {
+    "name": "Pranav",
+    "email": "pranav@example.com",
+    "experienceLevel": "Senior",
+    "profileCompletion": 92
+  },
+  "careerPreferences": {
+    "industry": "Product Company",
+    "weeklyLearningHours": 8,
+    "workPreference": "Remote",
+    "careerObjective": "Switch companies"
+  },
+  "workspace": {
+    "defaultTab": "Dashboard",
+    "sidebarCollapsed": false,
+    "density": "Comfortable",
+    "reduceAnimations": false,
+    "confirmDestructive": true
+  },
+  "analysis": {
+    "resumeAnalysisFrequency": "Weekly",
+    "githubSyncFrequency": "Daily",
+    "automaticTargetRecalculation": true,
+    "prioritizeVerifiedEvidence": true,
+    "showBenchmarkDetails": true
+  },
+  "notifications": {
+    "roadmapMilestones": true,
+    "resumeImprovements": true,
+    "targetChanges": true,
+    "githubSync": true,
+    "weeklySummary": true
+  },
+  "connections": {
+    "github": {
+      "connected": true,
+      "lastSynced": "Today, 10:32 AM"
+    },
+    "gitlab": {
+      "connected": false
+    },
+    "bitbucket": {
+      "connected": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+  { "id": "stripe", "name": "Stripe", "logo": "ST", "reqs": ["TypeScript", "React", "PostgreSQL", "Node.js", "API Design"], "baseline": 75 },
+  { "id": "google", "name": "Google", "logo": "GO", "reqs": ["Go", "Kubernetes", "System Design", "Python", "CUDA"], "baseline": 70 },
+  { "id": "microsoft", "name": "Microsoft", "logo": "MS", "reqs": ["TypeScript", "React", "PostgreSQL", "SQL Server", "Docker"], "baseline": 72 },
+  { "id": "amazon", "name": "Amazon", "logo": "AM", "reqs": ["Python", "Go", "Docker", "PostgreSQL", "API Design"], "baseline": 68 },
+  { "id": "netflix", "name": "Netflix", "logo": "NX", "reqs": ["gRPC", "Docker", "Go", "CUDA", "System Design"], "baseline": 74 },
+  { "id": "openai", "name": "OpenAI", "logo": "OA", "reqs": ["Python", "PyTorch", "CUDA", "Docker", "C++"], "baseline": 76 },
+  { "id": "nvidia", "name": "NVIDIA", "logo": "NV", "reqs": ["CUDA", "C++", "Docker", "Python", "System Design"], "baseline": 73 },
+  { "id": "apple", "name": "Apple", "logo": "AP", "reqs": ["Swift", "Objective-C", "C++", "System Design"], "baseline": 71 },
+  { "id": "meta", "name": "Meta", "logo": "ME", "reqs": ["React", "Python", "System Design", "C++", "PyTorch"], "baseline": 69 },
+  { "id": "adobe", "name": "Adobe", "logo": "AD", "reqs": ["TypeScript", "React", "C++", "Docker", "WebGL"], "baseline": 67 },
+  { "id": "uber", "name": "Uber", "logo": "UB", "reqs": ["Go", "Java", "Kubernetes", "PostgreSQL", "Kafka"], "baseline": 70 },
+  { "id": "airbnb", "name": "Airbnb", "logo": "AB", "reqs": ["TypeScript", "React", "Ruby on Rails", "PostgreSQL"], "baseline": 68 },
+  { "id": "atlassian", "name": "Atlassian", "logo": "AT", "reqs": ["TypeScript", "React", "Java", "AWS", "PostgreSQL"], "baseline": 69 },
+  { "id": "salesforce", "name": "Salesforce", "logo": "SF", "reqs": ["Java", "JavaScript", "AWS", "PostgreSQL"], "baseline": 66 },
+  { "id": "oracle", "name": "Oracle", "logo": "OR", "reqs": ["Java", "SQL Server", "Docker", "Kubernetes"], "baseline": 68 },
+  { "id": "intel", "name": "Intel", "logo": "IN", "reqs": ["C++", "Python", "CUDA", "System Design"], "baseline": 65 }
+]

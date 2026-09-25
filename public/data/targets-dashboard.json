@@ -1,0 +1,373 @@
+{
+  "companies": [
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "industry": "Fintech / Payments Infrastructure",
+      "baseline": 84,
+      "hiringBar": "Very High",
+      "preferredTechnologies": ["Ruby", "Go", "TypeScript", "React", "Docker", "PostgreSQL", "Kafka"],
+      "architectureExpectations": "Idempotent payment APIs, high-availability transaction processing, distributed consistency, observability.",
+      "evidenceExpectations": "Requires production code evidence demonstrating concurrency safety, strict typing, and telemetry instrumentation."
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "industry": "Cloud & Distributed Systems",
+      "baseline": 88,
+      "hiringBar": "Exceptional",
+      "preferredTechnologies": ["Go", "C++", "Java", "Python", "Kubernetes", "gRPC", "Borg"],
+      "architectureExpectations": "Massively distributed consensus, low-latency microservices, fault-tolerant RPCs, high-scale system design.",
+      "evidenceExpectations": "Requires verified distributed systems algorithms, low-level networking, and rigorous integration test suites."
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "industry": "Enterprise & Cloud Services",
+      "baseline": 82,
+      "hiringBar": "High",
+      "preferredTechnologies": ["C#", ".NET Core", "TypeScript", "React", "Azure", "PostgreSQL", "Docker"],
+      "architectureExpectations": "Enterprise SaaS architectures, multi-tenant database isolation, Azure cloud native services, strict type safety.",
+      "evidenceExpectations": "Strong full-stack framework design, clean repository organization, and automated CI/CD workflows."
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "industry": "E-Commerce & AWS Cloud",
+      "baseline": 85,
+      "hiringBar": "Very High",
+      "preferredTechnologies": ["Java", "Python", "TypeScript", "AWS", "DynamoDB", "Docker", "Terraform"],
+      "architectureExpectations": "Event-driven asynchronous architectures, serverless microservices, distributed transaction coordination.",
+      "evidenceExpectations": "Demonstrated operational excellence, IaC infrastructure deployments, and scalable API design."
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "industry": "Streaming & Media Infrastructure",
+      "baseline": 87,
+      "hiringBar": "Exceptional",
+      "preferredTechnologies": ["Java", "Node.js", "React", "AWS", "Spinnaker", "Kafka", "Cassandra"],
+      "architectureExpectations": "Chaos-engineered microservices, high-bandwidth streaming protocols, multi-region failover resilience.",
+      "evidenceExpectations": "Resilient client streaming architectures, high throughput telemetry, and automated deployment pipelines."
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "industry": "Artificial Intelligence Research & Platforms",
+      "baseline": 90,
+      "hiringBar": "World Class",
+      "preferredTechnologies": ["Python", "PyTorch", "Rust", "CUDA", "Kubernetes", "Ray", "Triton"],
+      "architectureExpectations": "Large-scale GPU cluster orchestration, low-latency inference endpoints, high-throughput token streaming.",
+      "evidenceExpectations": "Advanced distributed training infrastructure, vector indexing, and mathematical algorithmic depth."
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "industry": "Semiconductors & GPU Accelerated Computing",
+      "baseline": 89,
+      "hiringBar": "Exceptional",
+      "preferredTechnologies": ["C++", "CUDA", "Python", "TensorRT", "Linux Kernel", "Docker"],
+      "architectureExpectations": "Hardware-accelerated compute pipelines, kernel optimization, high-bandwidth memory parallelism.",
+      "evidenceExpectations": "Low-level memory management, parallel processing benchmarks, and high-performance C++ codebases."
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "industry": "Cloud Observability & Security",
+      "baseline": 83,
+      "hiringBar": "High",
+      "preferredTechnologies": ["Go", "Python", "TypeScript", "React", "Kafka", "PostgreSQL", "Docker"],
+      "architectureExpectations": "Time-series data ingestion pipelines, high-volume metric aggregation, real-time dashboarding.",
+      "evidenceExpectations": "Strong Go concurrency, Prometheus/OpenTelemetry instrumentation, and streaming data visualization."
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "industry": "Social Platforms & AI Research",
+      "baseline": 86,
+      "hiringBar": "Very High",
+      "preferredTechnologies": ["Hack/PHP", "Python", "React", "C++", "PyTorch", "GraphQL", "Thrift"],
+      "architectureExpectations": "Billion-user real-time feed pipelines, GraphQL federation, high-concurrency client caching.",
+      "evidenceExpectations": "Advanced React component design, state architecture, and massive-scale database indexing."
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "industry": "Consumer Electronics & Cloud Ecosystems",
+      "baseline": 86,
+      "hiringBar": "Very High",
+      "preferredTechnologies": ["Swift", "C++", "Java", "Go", "Kubernetes", "PostgreSQL"],
+      "architectureExpectations": "Ultra-secure end-to-end encrypted storage, high-throughput cloud sync, privacy-first analytics.",
+      "evidenceExpectations": "Strict performance budgets, clean memory safety, and meticulous architectural craftsmanship."
+    }
+  ],
+  "roles": [
+    {
+      "id": "full-stack-engineer",
+      "name": "Full Stack Engineer",
+      "category": "Web & Distributed Applications",
+      "baselineScore": 85,
+      "skillRequirements": [
+        { "skill": "TypeScript", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "React", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Node.js", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "Docker", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "PostgreSQL", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "API Design", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Next.js", "importance": "Medium", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Redis", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Databases" },
+        { "skill": "Kubernetes", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "System Design", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 25,
+        "experience": 20,
+        "projects": 20,
+        "architecture": 15,
+        "resumeAlignment": 10,
+        "evidenceStrength": 10
+      }
+    },
+    {
+      "id": "backend-engineer",
+      "name": "Backend Engineer",
+      "category": "Backend Systems & Services",
+      "baselineScore": 86,
+      "skillRequirements": [
+        { "skill": "Go", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "Node.js", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "PostgreSQL", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "Docker", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "API Design", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Redis", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "Distributed Systems", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "gRPC", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Architecture" },
+        { "skill": "Kubernetes", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "CI/CD", "importance": "Medium", "expectedLevel": "Advanced", "category": "Infrastructure" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 30,
+        "experience": 15,
+        "projects": 25,
+        "architecture": 15,
+        "resumeAlignment": 5,
+        "evidenceStrength": 10
+      }
+    },
+    {
+      "id": "frontend-engineer",
+      "name": "Frontend Engineer",
+      "category": "Frontend UI & Client Performance",
+      "baselineScore": 83,
+      "skillRequirements": [
+        { "skill": "React", "importance": "High", "expectedLevel": "Expert", "category": "Core Engineering" },
+        { "skill": "TypeScript", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "Next.js", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Tailwind CSS", "importance": "Medium", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "WebSockets", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Programming" },
+        { "skill": "State Management", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Testing", "importance": "High", "expectedLevel": "Advanced", "category": "Testing" },
+        { "skill": "Performance Optimization", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 30,
+        "experience": 20,
+        "projects": 25,
+        "architecture": 10,
+        "resumeAlignment": 10,
+        "evidenceStrength": 5
+      }
+    },
+    {
+      "id": "ai-engineer",
+      "name": "AI Engineer",
+      "category": "Artificial Intelligence & LLM Platforms",
+      "baselineScore": 89,
+      "skillRequirements": [
+        { "skill": "Python", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "PyTorch", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Vector Databases", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "LLM Fine-Tuning", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Docker", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Infrastructure" },
+        { "skill": "Distributed Systems", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "TypeScript", "importance": "Low", "expectedLevel": "Intermediate", "category": "Programming" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 35,
+        "experience": 15,
+        "projects": 25,
+        "architecture": 15,
+        "resumeAlignment": 5,
+        "evidenceStrength": 5
+      }
+    },
+    {
+      "id": "cloud-engineer",
+      "name": "Cloud Engineer",
+      "category": "Cloud & Infrastructure Operations",
+      "baselineScore": 84,
+      "skillRequirements": [
+        { "skill": "AWS", "importance": "High", "expectedLevel": "Advanced", "category": "Cloud" },
+        { "skill": "Docker", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Kubernetes", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Terraform", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "CI/CD", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Go", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Programming" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 25,
+        "experience": 20,
+        "projects": 20,
+        "architecture": 20,
+        "resumeAlignment": 5,
+        "evidenceStrength": 10
+      }
+    },
+    {
+      "id": "devops-engineer",
+      "name": "DevOps Engineer",
+      "category": "CI/CD & Platform Automation",
+      "baselineScore": 83,
+      "skillRequirements": [
+        { "skill": "CI/CD", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Docker", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Kubernetes", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Terraform", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Observability", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Linux", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 25,
+        "experience": 20,
+        "projects": 20,
+        "architecture": 20,
+        "resumeAlignment": 5,
+        "evidenceStrength": 10
+      }
+    },
+    {
+      "id": "platform-engineer",
+      "name": "Platform Engineer",
+      "category": "Developer Platform & Distributed Infrastructure",
+      "baselineScore": 86,
+      "skillRequirements": [
+        { "skill": "Go", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "Kubernetes", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Docker", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Internal Tooling", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Distributed Systems", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 30,
+        "experience": 15,
+        "projects": 25,
+        "architecture": 20,
+        "resumeAlignment": 5,
+        "evidenceStrength": 5
+      }
+    },
+    {
+      "id": "security-engineer",
+      "name": "Security Engineer",
+      "category": "Application Security & Cryptography",
+      "baselineScore": 85,
+      "skillRequirements": [
+        { "skill": "OAuth / AuthN", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Cloud Security", "importance": "High", "expectedLevel": "Advanced", "category": "Cloud" },
+        { "skill": "Vulnerability Scanning", "importance": "High", "expectedLevel": "Advanced", "category": "Testing" },
+        { "skill": "Docker", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Infrastructure" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 30,
+        "experience": 20,
+        "projects": 20,
+        "architecture": 20,
+        "resumeAlignment": 5,
+        "evidenceStrength": 5
+      }
+    },
+    {
+      "id": "data-engineer",
+      "name": "Data Engineer",
+      "category": "Data Pipelines & Warehousing",
+      "baselineScore": 84,
+      "skillRequirements": [
+        { "skill": "Python", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "SQL", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "Kafka", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "PostgreSQL", "importance": "High", "expectedLevel": "Advanced", "category": "Databases" },
+        { "skill": "Docker", "importance": "Medium", "expectedLevel": "Intermediate", "category": "Infrastructure" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 30,
+        "experience": 20,
+        "projects": 20,
+        "architecture": 15,
+        "resumeAlignment": 5,
+        "evidenceStrength": 10
+      }
+    },
+    {
+      "id": "solutions-architect",
+      "name": "Solutions Architect",
+      "category": "Cloud Systems & Enterprise Architecture",
+      "baselineScore": 85,
+      "skillRequirements": [
+        { "skill": "AWS", "importance": "High", "expectedLevel": "Expert", "category": "Cloud" },
+        { "skill": "System Design", "importance": "High", "expectedLevel": "Expert", "category": "Architecture" },
+        { "skill": "API Design", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Docker", "importance": "Medium", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "PostgreSQL", "importance": "Medium", "expectedLevel": "Advanced", "category": "Databases" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 20,
+        "experience": 25,
+        "projects": 15,
+        "architecture": 25,
+        "resumeAlignment": 10,
+        "evidenceStrength": 5
+      }
+    },
+    {
+      "id": "machine-learning-engineer",
+      "name": "Machine Learning Engineer",
+      "category": "Applied ML & Pipeline Serving",
+      "baselineScore": 88,
+      "skillRequirements": [
+        { "skill": "Python", "importance": "High", "expectedLevel": "Advanced", "category": "Programming" },
+        { "skill": "PyTorch", "importance": "High", "expectedLevel": "Advanced", "category": "Core Engineering" },
+        { "skill": "Docker", "importance": "High", "expectedLevel": "Advanced", "category": "Infrastructure" },
+        { "skill": "Model Serving", "importance": "High", "expectedLevel": "Advanced", "category": "Architecture" },
+        { "skill": "Distributed Systems", "importance": "High", "expectedLevel": "Intermediate", "category": "Architecture" }
+      ],
+      "importanceWeights": {
+        "technicalSkills": 35,
+        "experience": 15,
+        "projects": 25,
+        "architecture": 15,
+        "resumeAlignment": 5,
+        "evidenceStrength": 5
+      }
+    }
+  ],
+  "defaultHistory": [
+    {
+      "company": "Google",
+      "role": "Backend Engineer",
+      "score": 89,
+      "lastAnalyzed": "Aug 8, 2026"
+    },
+    {
+      "company": "Stripe",
+      "role": "Full Stack Engineer",
+      "score": 92,
+      "lastAnalyzed": "Aug 5, 2026"
+    },
+    {
+      "company": "Microsoft",
+      "role": "Frontend Engineer",
+      "score": 86,
+      "lastAnalyzed": "Jul 29, 2026"
+    }
+  ]
+}

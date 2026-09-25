@@ -1,0 +1,47 @@
+[
+  {
+    "name": "raft-consensus",
+    "stars": 12,
+    "language": "Go",
+    "commits": 34,
+    "lastUpdated": "2 days ago",
+    "verified": true,
+    "technologies": ["Go", "gRPC", "Docker"]
+  },
+  {
+    "name": "api-gateway",
+    "stars": 4,
+    "language": "TypeScript",
+    "commits": 48,
+    "lastUpdated": "1 week ago",
+    "verified": true,
+    "technologies": ["TypeScript", "Node.js", "Express", "Docker"]
+  },
+  {
+    "name": "react-dashboard",
+    "stars": 15,
+    "language": "TypeScript",
+    "commits": 96,
+    "lastUpdated": "3 days ago",
+    "verified": true,
+    "technologies": ["React", "Next.js", "Tailwind CSS", "TypeScript"]
+  },
+  {
+    "name": "distributed-cache",
+    "stars": 8,
+    "language": "Go",
+    "commits": 22,
+    "lastUpdated": "5 days ago",
+    "verified": true,
+    "technologies": ["Go", "Redis", "gRPC"]
+  },
+  {
+    "name": "wasm-kernel",
+    "stars": 29,
+    "language": "Rust",
+    "commits": 60,
+    "lastUpdated": "4 days ago",
+    "verified": true,
+    "technologies": ["Rust", "WebAssembly", "C++"]
+  }
+]

@@ -1,0 +1,387 @@
+{
+  "roadmaps": {
+    "stripe-full-stack": {
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "currentMatch": 92,
+      "projectedMatch": 97,
+      "totalEstimatedHours": 36,
+      "weeksCount": 6,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "title": "Foundation & Core Engineering",
+          "theme": "TypeScript & Backend Data Contracts",
+          "status": "Completed"
+        },
+        {
+          "weekNumber": 2,
+          "title": "Infrastructure & Production Engineering",
+          "theme": "Kubernetes & CI/CD Pipelines",
+          "status": "Current"
+        },
+        {
+          "weekNumber": 3,
+          "title": "System Design & Concurrency",
+          "theme": "Distributed Consensus & Rate Limiting",
+          "status": "Upcoming"
+        },
+        {
+          "weekNumber": 4,
+          "title": "Reliability & Observability",
+          "theme": "OpenTelemetry & Prometheus Instrumentation",
+          "status": "Upcoming"
+        },
+        {
+          "weekNumber": 5,
+          "title": "Evidence & Portfolio Packaging",
+          "theme": "Documentation & Reproducible Benchmarks",
+          "status": "Upcoming"
+        },
+        {
+          "weekNumber": 6,
+          "title": "Final Target Calibration",
+          "theme": "Mock System Design & Interview Preparation",
+          "status": "Upcoming"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "ms-k8s-deploy",
+          "title": "Build Kubernetes Deployment & Service Manifests",
+          "skill": "Kubernetes",
+          "category": "Infrastructure",
+          "priority": "Critical",
+          "estimatedHours": 6,
+          "difficulty": "Advanced",
+          "currentLevel": "Intermediate",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 3,
+          "whyItMatters": "Stripe expects production container orchestration proof. Your CKA certification provides theoretical knowledge, but adding Helm manifests to api-gateway completes verified code proof.",
+          "actions": [
+            "Write production deployment.yaml with liveness and readiness probes",
+            "Configure ClusterIP service and Ingress routing rules",
+            "Define resource requests/limits and Horizontal Pod Autoscaler (HPA)",
+            "Package configuration into reusable Helm chart template"
+          ],
+          "evidenceRequired": [
+            "k8s/deployment.yaml",
+            "k8s/service.yaml",
+            "k8s/hpa.yaml",
+            "helm/api-gateway/Chart.yaml"
+          ],
+          "status": "In Progress",
+          "week": 2,
+          "dependencies": ["ms-docker-multi"],
+          "relatedProject": "api-gateway",
+          "relatedResumeEvidence": "Certified Kubernetes Administrator (CKA) certification",
+          "learningResources": [
+            { "title": "Kubernetes Production Best Practices", "type": "Documentation" },
+            { "title": "High Availability Pod Autoscaling Guide", "type": "Architecture Reference" }
+          ],
+          "completionCriteria": "Verified Helm chart and production deployment YAML manifests committing to api-gateway repository."
+        },
+        {
+          "id": "ms-cicd-pipeline",
+          "title": "Implement Automated GitHub Actions CI/CD Pipeline",
+          "skill": "CI/CD",
+          "category": "Infrastructure",
+          "priority": "High",
+          "estimatedHours": 4,
+          "difficulty": "Intermediate",
+          "currentLevel": "Partial",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 2,
+          "whyItMatters": "Automated linting, race condition testing, and container publishing demonstrate production engineering maturity.",
+          "actions": [
+            "Create .github/workflows/ci.yml with Go test matrix and race detector",
+            "Add automated Docker build and container vulnerability scanning",
+            "Integrate automated branch protection rules"
+          ],
+          "evidenceRequired": [
+            ".github/workflows/ci.yml",
+            ".github/workflows/docker-publish.yml"
+          ],
+          "status": "In Progress",
+          "week": 2,
+          "dependencies": ["ms-docker-multi"],
+          "relatedProject": "api-gateway",
+          "relatedResumeEvidence": "AWS Certified Solutions Architect",
+          "learningResources": [
+            { "title": "GitHub Actions for Go Microservices", "type": "Guide" }
+          ],
+          "completionCriteria": "Green CI build workflow running unit tests with race detection and publishing multi-arch container images."
+        },
+        {
+          "id": "ms-docker-multi",
+          "title": "Containerize API Gateway with Multi-Stage Alpine Builds",
+          "skill": "Docker",
+          "category": "Infrastructure",
+          "priority": "High",
+          "estimatedHours": 4,
+          "difficulty": "Intermediate",
+          "currentLevel": "Advanced",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 1,
+          "whyItMatters": "Minimal attack surface and unprivileged container runtime execution.",
+          "actions": [
+            "Create multi-stage Dockerfile building Go binary into minimal Alpine image",
+            "Configure non-root user execution and health check endpoints",
+            "Add docker-compose.yml for local cluster orchestration with Redis"
+          ],
+          "evidenceRequired": [
+            "Dockerfile",
+            "docker-compose.yml"
+          ],
+          "status": "Verified",
+          "week": 1,
+          "dependencies": [],
+          "relatedProject": "api-gateway",
+          "relatedResumeEvidence": "Dockerized container pipelines in TechCorp",
+          "learningResources": [
+            { "title": "Multi-Stage Dockerfile Security", "type": "Documentation" }
+          ],
+          "completionCriteria": "Multi-stage Dockerfile verified with 0 vulnerability findings."
+        },
+        {
+          "id": "ms-dist-consensus",
+          "title": "Implement Cluster Quorum Chaos Testing in Distributed Cache",
+          "skill": "Distributed Systems",
+          "category": "Architecture",
+          "priority": "Critical",
+          "estimatedHours": 8,
+          "difficulty": "Advanced",
+          "currentLevel": "Intermediate",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 4,
+          "whyItMatters": "Validates split-brain recovery and Raft consensus safety under network partitions.",
+          "actions": [
+            "Write cluster partition simulation script dropping network packets between nodes",
+            "Verify leader re-election safety and term increment invariants",
+            "Add benchmark measuring write latency during minority partition failover"
+          ],
+          "evidenceRequired": [
+            "pkg/raft/partition_test.go",
+            "benchmarks/chaos_report.md"
+          ],
+          "status": "Not Started",
+          "week": 3,
+          "dependencies": ["ms-k8s-deploy"],
+          "relatedProject": "distributed-cache",
+          "relatedResumeEvidence": "Architected low-latency distributed microservices",
+          "learningResources": [
+            { "title": "Raft Consensus Algorithm Visualization", "type": "Whitepaper" }
+          ],
+          "completionCriteria": "Automated partition test passing with zero split-brain state discrepancies."
+        },
+        {
+          "id": "ms-telemetry-otel",
+          "title": "Instrument OpenTelemetry Distributed Tracing & Metrics",
+          "skill": "Observability",
+          "category": "Architecture",
+          "priority": "Medium",
+          "estimatedHours": 5,
+          "difficulty": "Intermediate",
+          "currentLevel": "Beginner",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 2,
+          "whyItMatters": "Production observability across microservice hops is a hallmark of senior engineering roles.",
+          "actions": [
+            "Add OpenTelemetry SDK tracer provider to Go HTTP middleware",
+            "Propagate W3C tracecontext headers across outbound client requests",
+            "Export Prometheus metrics for request duration histograms and error rates"
+          ],
+          "evidenceRequired": [
+            "internal/telemetry/tracer.go",
+            "internal/telemetry/metrics.go"
+          ],
+          "status": "Not Started",
+          "week": 4,
+          "dependencies": ["ms-k8s-deploy"],
+          "relatedProject": "api-gateway",
+          "relatedResumeEvidence": "Improved query latency by 40% with Redis caching",
+          "learningResources": [
+            { "title": "OpenTelemetry Go Instrumentation", "type": "Documentation" }
+          ],
+          "completionCriteria": "Trace headers propagated across HTTP router with Prometheus /metrics endpoint."
+        },
+        {
+          "id": "ms-postgres-scale",
+          "title": "Optimize PostgreSQL Advisory Locks & Index Execution Plans",
+          "skill": "PostgreSQL",
+          "category": "Databases",
+          "priority": "High",
+          "estimatedHours": 5,
+          "difficulty": "Advanced",
+          "currentLevel": "Advanced",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 2,
+          "whyItMatters": "Demonstrates high-scale transactional safety and query execution optimization.",
+          "actions": [
+            "Implement SKIP LOCKED worker queue polling in task-orchestrator",
+            "Run EXPLAIN ANALYZE on complex join queries and add partial index",
+            "Document connection pooling limits under high concurrency"
+          ],
+          "evidenceRequired": [
+            "src/db/queries.sql",
+            "docs/postgres-benchmarks.md"
+          ],
+          "status": "Verified",
+          "week": 1,
+          "dependencies": [],
+          "relatedProject": "task-orchestrator",
+          "relatedResumeEvidence": "PostgreSQL transaction management and connection pooling",
+          "learningResources": [
+            { "title": "PostgreSQL Concurrency & Locking", "type": "Guide" }
+          ],
+          "completionCriteria": "Advisory locking query execution time under 5ms at 1000 concurrent requests."
+        },
+        {
+          "id": "ms-portfolio-docs",
+          "title": "Publish Comprehensive Architecture & Benchmark Whitepapers",
+          "skill": "Documentation",
+          "category": "Core Engineering",
+          "priority": "Medium",
+          "estimatedHours": 4,
+          "difficulty": "Intermediate",
+          "currentLevel": "Intermediate",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 1,
+          "whyItMatters": "Elite hiring managers prioritize written communication and clear technical documentation.",
+          "actions": [
+            "Write detailed architecture overview in api-gateway README with Mermaid diagrams",
+            "Document performance benchmark throughput numbers (RPS, p99 latency)",
+            "Publish deployment step-by-step walkthrough"
+          ],
+          "evidenceRequired": [
+            "README.md",
+            "docs/ARCHITECTURE.md"
+          ],
+          "status": "Not Started",
+          "week": 5,
+          "dependencies": ["ms-telemetry-otel"],
+          "relatedProject": "api-gateway",
+          "relatedResumeEvidence": "Technical blog authoring with Next.js MDX",
+          "learningResources": [
+            { "title": "Writing World-Class Engineering READMEs", "type": "Guide" }
+          ],
+          "completionCriteria": "Complete architecture diagrams and reproducible k6 benchmark results published in repo."
+        }
+      ]
+    },
+    "google-backend": {
+      "targetCompany": "Google",
+      "targetRole": "Backend Engineer",
+      "currentMatch": 89,
+      "projectedMatch": 96,
+      "totalEstimatedHours": 38,
+      "weeksCount": 6,
+      "weeks": [
+        { "weekNumber": 1, "title": "Go Concurrency & Low-Level Networking", "theme": "Goroutines & Channels", "status": "Completed" },
+        { "weekNumber": 2, "title": "Distributed Consensus & Raft", "theme": "Leader Election & Log Replication", "status": "Current" },
+        { "weekNumber": 3, "title": "Kubernetes & Microservice Ingress", "theme": "Container Orchestration", "status": "Upcoming" },
+        { "weekNumber": 4, "title": "gRPC & Protocol Buffers", "theme": "Binary Serialization & Streaming", "status": "Upcoming" },
+        { "weekNumber": 5, "title": "Large-Scale Systems Benchmarking", "theme": "Concurrency Chaos Testing", "status": "Upcoming" },
+        { "weekNumber": 6, "title": "Target Architecture Preparation", "theme": "Google Systems Design Review", "status": "Upcoming" }
+      ],
+      "milestones": [
+        {
+          "id": "ms-google-raft",
+          "title": "Validate Raft Log Replication Invariants Under Partitions",
+          "skill": "Distributed Systems",
+          "category": "Architecture",
+          "priority": "Critical",
+          "estimatedHours": 8,
+          "difficulty": "Advanced",
+          "currentLevel": "Intermediate",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 4,
+          "whyItMatters": "Google backend engineering demands rigorous proof of distributed algorithms and consensus safety.",
+          "actions": [
+            "Write chaos test simulating network drops between Raft peers",
+            "Verify log index monotonic progression and commit safety",
+            "Benchmark leader election timeout under randomized jitter"
+          ],
+          "evidenceRequired": ["pkg/raft/election_test.go", "pkg/raft/log_test.go"],
+          "status": "In Progress",
+          "week": 2,
+          "dependencies": [],
+          "relatedProject": "distributed-cache",
+          "relatedResumeEvidence": "Built distributed caching engines in Go",
+          "learningResources": [{ "title": "Raft Algorithm Invariants", "type": "Whitepaper" }],
+          "completionCriteria": "Passing Raft consensus unit test suite with race detector enabled."
+        },
+        {
+          "id": "ms-google-grpc",
+          "title": "Implement Bidirectional Streaming gRPC Service",
+          "skill": "gRPC",
+          "category": "Architecture",
+          "priority": "High",
+          "estimatedHours": 6,
+          "difficulty": "Advanced",
+          "currentLevel": "Intermediate",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 3,
+          "whyItMatters": "High-throughput binary RPCs are the backbone of Google's internal microservices infrastructure.",
+          "actions": [
+            "Define Protobuf v3 streaming service contracts",
+            "Implement concurrent Go client and server streaming handlers",
+            "Add keepalive parameters and deadline propagation"
+          ],
+          "evidenceRequired": ["proto/stream.proto", "pkg/rpc/server.go"],
+          "status": "Not Started",
+          "week": 4,
+          "dependencies": ["ms-google-raft"],
+          "relatedProject": "distributed-cache",
+          "relatedResumeEvidence": "Low-latency microservices with Node.js and Go",
+          "learningResources": [{ "title": "gRPC Performance Best Practices", "type": "Documentation" }],
+          "completionCriteria": "Validated bidirectional streaming gRPC service with client benchmarks."
+        }
+      ]
+    },
+    "default-custom": {
+      "targetCompany": "Custom Target",
+      "targetRole": "Engineering Candidate",
+      "currentMatch": 88,
+      "projectedMatch": 95,
+      "totalEstimatedHours": 32,
+      "weeksCount": 6,
+      "weeks": [
+        { "weekNumber": 1, "title": "Core Technical Depth", "theme": "Codebase Quality", "status": "Completed" },
+        { "weekNumber": 2, "title": "Infrastructure & Cloud", "theme": "Containerization & CI/CD", "status": "Current" },
+        { "weekNumber": 3, "title": "System Architecture", "theme": "Scalability & Reliability", "status": "Upcoming" },
+        { "weekNumber": 4, "title": "Testing & Observability", "theme": "Telemetry & Metrics", "status": "Upcoming" },
+        { "weekNumber": 5, "title": "Evidence Packaging", "theme": "Portfolio Documentation", "status": "Upcoming" },
+        { "weekNumber": 6, "title": "Target Readiness", "theme": "Final Benchmark Polish", "status": "Upcoming" }
+      ],
+      "milestones": [
+        {
+          "id": "ms-custom-infra",
+          "title": "Establish Cloud Container Infrastructure Evidence",
+          "skill": "Infrastructure",
+          "category": "Infrastructure",
+          "priority": "High",
+          "estimatedHours": 6,
+          "difficulty": "Intermediate",
+          "currentLevel": "Intermediate",
+          "targetLevel": "Advanced",
+          "projectedScoreImpact": 3,
+          "whyItMatters": "Proves reproducible deployment standards for enterprise technology targets.",
+          "actions": [
+            "Configure Docker containerization manifests",
+            "Add automated CI pipeline in GitHub Actions",
+            "Document environment variable injection and secret management"
+          ],
+          "evidenceRequired": ["Dockerfile", ".github/workflows/ci.yml"],
+          "status": "In Progress",
+          "week": 2,
+          "dependencies": [],
+          "relatedProject": "api-gateway",
+          "relatedResumeEvidence": "Dockerized container environments",
+          "learningResources": [{ "title": "Cloud Infrastructure Guidelines", "type": "Guide" }],
+          "completionCriteria": "Automated CI/CD pipeline building and verifying container deployments."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "readiness": {
+    "currentReadiness": 92,
+    "previousReadiness": 84,
+    "readinessChange": 8,
+    "weeklyImprovement": 3.2,
+    "monthlyImprovement": 11.5,
+    "careerLevel": "Strong Candidate"
+  },
+  "checkpoints": [
+    {
+      "date": "2026-05-15",
+      "score": 70,
+      "targetCompany": "Microsoft",
+      "targetRole": "Frontend Engineer",
+      "change": 0,
+      "majorImprovement": "Initial profile and resume parsed",
+      "completedMilestone": "Foundation"
+    },
+    {
+      "date": "2026-05-28",
+      "score": 74,
+      "targetCompany": "Microsoft",
+      "targetRole": "Frontend Engineer",
+      "change": 4,
+      "majorImprovement": "React and TypeScript codebases connected",
+      "completedMilestone": "Foundation"
+    },
+    {
+      "date": "2026-06-10",
+      "score": 78,
+      "targetCompany": "Microsoft",
+      "targetRole": "Frontend Engineer",
+      "change": 4,
+      "majorImprovement": "Completed React 19 state optimization",
+      "completedMilestone": "Foundation"
+    },
+    {
+      "date": "2026-06-22",
+      "score": 82,
+      "targetCompany": "Microsoft",
+      "targetRole": "Frontend Engineer",
+      "change": 4,
+      "majorImprovement": "Strict TypeScript compilation enabled",
+      "completedMilestone": "Foundation"
+    },
+    {
+      "date": "2026-07-05",
+      "score": 84,
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "change": 2,
+      "majorImprovement": "Target changed: recalibrated for Stripe",
+      "completedMilestone": "Recalibration"
+    },
+    {
+      "date": "2026-07-12",
+      "score": 85,
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "change": 1,
+      "majorImprovement": "Advisory locks in PostgreSQL optimized",
+      "completedMilestone": "Foundation"
+    },
+    {
+      "date": "2026-07-18",
+      "score": 86,
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "change": 1,
+      "majorImprovement": "Multi-stage Docker builds verified",
+      "completedMilestone": "Infrastructure"
+    },
+    {
+      "date": "2026-07-25",
+      "score": 87,
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "change": 1,
+      "majorImprovement": "Resume ATS formatting polished",
+      "completedMilestone": "Resume Alignment"
+    },
+    {
+      "date": "2026-08-02",
+      "score": 89,
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "change": 2,
+      "majorImprovement": "API Gateway microservice connected",
+      "completedMilestone": "Projects"
+    },
+    {
+      "date": "2026-08-10",
+      "score": 92,
+      "targetCompany": "Stripe",
+      "targetRole": "Full Stack Engineer",
+      "change": 3,
+      "majorImprovement": "Kubernetes Helm charts verified",
+      "completedMilestone": "Infrastructure"
+    }
+  ],
+  "skills": [
+    {
+      "skill": "Kubernetes",
+      "previousLevel": 42,
+      "currentLevel": 68,
+      "targetLevel": 80,
+      "change": 26,
+      "evidenceAdded": ["CKA Certification", "api-gateway Helm manifests", "Kubernetes Deployment configuration"],
+      "category": "Infrastructure"
+    },
+    {
+      "skill": "TypeScript",
+      "previousLevel": 80,
+      "currentLevel": 94,
+      "targetLevel": 90,
+      "change": 14,
+      "evidenceAdded": ["strictNullChecks enabled", "Immutable telemetry event union types"],
+      "category": "Frontend"
+    },
+    {
+      "skill": "React",
+      "previousLevel": 82,
+      "currentLevel": 95,
+      "targetLevel": 90,
+      "change": 13,
+      "evidenceAdded": ["Virtual canvas chart rendering", "Custom react hooks implementation"],
+      "category": "Frontend"
+    },
+    {
+      "skill": "Node.js",
+      "previousLevel": 78,
+      "currentLevel": 90,
+      "targetLevel": 85,
+      "change": 12,
+      "evidenceAdded": ["Worker threads queue processing", "WebSocket connection pooling"],
+      "category": "Backend"
+    },
+    {
+      "skill": "Go",
+      "previousLevel": 74,
+      "currentLevel": 88,
+      "targetLevel": 85,
+      "change": 14,
+      "evidenceAdded": ["HTTP reverse proxy routines", "Raft consensus election safety"],
+      "category": "Backend"
+    },
+    {
+      "skill": "Docker",
+      "previousLevel": 70,
+      "currentLevel": 86,
+      "targetLevel": 80,
+      "change": 16,
+      "evidenceAdded": ["Multi-stage Alpine base builds", "docker-compose local orchestrations"],
+      "category": "Infrastructure"
+    },
+    {
+      "skill": "PostgreSQL",
+      "previousLevel": 75,
+      "currentLevel": 88,
+      "targetLevel": 80,
+      "change": 13,
+      "evidenceAdded": ["SKIP LOCKED advisory queue locks", "Partial query indexations"],
+      "category": "Databases"
+    },
+    {
+      "skill": "Redis",
+      "previousLevel": 65,
+      "currentLevel": 82,
+      "targetLevel": 75,
+      "change": 17,
+      "evidenceAdded": ["Connection pool tuning", "Session invalidation caches"],
+      "category": "Databases"
+    },
+    {
+      "skill": "System Design",
+      "previousLevel": 60,
+      "currentLevel": 71,
+      "targetLevel": 82,
+      "change": 11,
+      "evidenceAdded": ["Distributed consensus designs", "Failover failback recovery specs"],
+      "category": "Architecture"
+    },
+    {
+      "skill": "CI/CD",
+      "previousLevel": 68,
+      "currentLevel": 84,
+      "targetLevel": 80,
+      "change": 16,
+      "evidenceAdded": ["GitHub Actions Go workflow tests", "Vulnerability scans integrations"],
+      "category": "DevOps"
+    },
+    {
+      "skill": "Distributed Systems",
+      "previousLevel": 55,
+      "currentLevel": 70,
+      "targetLevel": 85,
+      "change": 15,
+      "evidenceAdded": ["Raft log replication tests", "Quorum consensus structures"],
+      "category": "Architecture"
+    },
+    {
+      "skill": "Cloud Architecture",
+      "previousLevel": 62,
+      "currentLevel": 74,
+      "targetLevel": 80,
+      "change": 12,
+      "evidenceAdded": ["AWS Certified Solutions Architect", "Localstack test suites"],
+      "category": "DevOps"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach-k8s",
+      "title": "Kubernetes capability verified",
+      "description": "Verified Helm deployment manifests in api-gateway codebase.",
+      "date": "Aug 10, 2026",
+      "impact": "+3% readiness",
+      "category": "Infrastructure",
+      "relatedModule": "Roadmap"
+    },
+    {
+      "id": "ach-resume-ats",
+      "title": "Resume ATS score improved",
+      "description": "Polished strict format standard and added metrics impact.",
+      "date": "Aug 06, 2026",
+      "impact": "86% → 91%",
+      "category": "Resume",
+      "relatedModule": "Resume"
+    },
+    {
+      "id": "ach-api-verify",
+      "title": "API Gateway project verified",
+      "description": "Authenticated reverse proxy routines and CORS handlers.",
+      "date": "Aug 02, 2026",
+      "impact": "Strong Evidence",
+      "category": "Projects",
+      "relatedModule": "Projects"
+    },
+    {
+      "id": "ach-sys-milestone",
+      "title": "System Design milestone completed",
+      "description": "Closed consensus protocols design gap.",
+      "date": "Jul 28, 2026",
+      "impact": "+2% readiness",
+      "category": "Roadmap",
+      "relatedModule": "Roadmap"
+    }
+  ],
+  "insights": {
+    "strongestImprovement": "Kubernetes improved by 26 points over the last 30 days.",
+    "biggestCareerImpact": "Infrastructure evidence produced the largest increase in target readiness.",
+    "emergingGap": "System Design remains 11 points below your target benchmark.",
+    "positiveTrend": "Verified technical evidence has increased consistently for 4 consecutive weeks."
+  },
+  "nextAction": {
+    "title": "Strengthen System Design Evidence",
+    "currentLevel": 71,
+    "targetLevel": 82,
+    "estimatedHours": 6,
+    "projectedScoreImpact": 3,
+    "buttonLabel": "View Roadmap"
+  }
+}

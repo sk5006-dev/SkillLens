@@ -1,0 +1,25 @@
+{
+  "skills": ["React", "Next.js", "TypeScript", "Node.js", "Docker", "PostgreSQL", "Go", "gRPC", "Tailwind CSS", "Redis"],
+  "experience": [
+    {
+      "role": "Senior Full Stack Engineer",
+      "company": "TechCorp",
+      "period": "2023 - Present",
+      "description": "Architected real-time dashboards and microservices using React, Next.js, and Node.js. Improved query latency by 40% with Redis caching."
+    },
+    {
+      "role": "Software Engineer",
+      "company": "DevSolutions",
+      "period": "2021 - 2023",
+      "description": "Built responsive web applications, implemented secure OAuth verification flows, and set up Dockerized container environments."
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.S. in Computer Science",
+      "school": "State University",
+      "period": "2017 - 2021"
+    }
+  ],
+  "certifications": ["AWS Certified Solutions Architect", "Certified Kubernetes Administrator"]
+}

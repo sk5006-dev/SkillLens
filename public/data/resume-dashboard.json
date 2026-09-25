@@ -1,0 +1,254 @@
+{
+  "healthScores": {
+    "resumeScore": 88,
+    "atsScore": 91,
+    "contentScore": 86,
+    "targetAlignment": 92,
+    "breakdown": {
+      "skillsCoverage": 94,
+      "experienceRelevance": 89,
+      "projectEvidence": 93,
+      "atsStructure": 91
+    },
+    "summaryExplanation": "Your resume demonstrates strong technical coverage and verified project evidence, though quantifying business impact in recent roles will improve conversion."
+  },
+  "targetAlignmentBreakdown": {
+    "technicalSkills": 94,
+    "experience": 89,
+    "projects": 93,
+    "education": 82,
+    "overall": 92
+  },
+  "roleRequirements": {
+    "Full Stack Engineer": ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "Docker", "API Design"],
+    "Frontend Engineer": ["TypeScript", "React", "Next.js", "Tailwind CSS", "Performance", "State Management"],
+    "Backend Engineer": ["Node.js", "Go", "PostgreSQL", "Docker", "gRPC", "API Design", "Redis"],
+    "Software Engineer": ["TypeScript", "Go", "PostgreSQL", "Docker", "Data Structures", "System Design"],
+    "AI Engineer": ["Python", "PyTorch", "CUDA", "Docker", "C++", "Machine Learning"],
+    "DevOps Engineer": ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform", "Linux"],
+    "Cloud Engineer": ["AWS", "Docker", "Kubernetes", "Terraform", "PostgreSQL", "Networking"],
+    "Data Engineer": ["Python", "PostgreSQL", "SQL Server", "Kafka", "Docker", "Airflow"]
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        {
+          "name": "React",
+          "status": "Verified",
+          "evidence": {
+            "resumeSnippet": "Architected real-time dashboards and microservices using React, Next.js, and Node.js at TechCorp.",
+            "projectProof": "react-dashboard (96 commits, TypeScript & React codebase)",
+            "rationale": "Demonstrated across production work experience and validated in GitHub project commits."
+          }
+        },
+        {
+          "name": "Next.js",
+          "status": "Verified",
+          "evidence": {
+            "resumeSnippet": "Built responsive web applications and SSR portals with Next.js App Router.",
+            "projectProof": "react-dashboard repository (Next.js 14 server components verified)",
+            "rationale": "Direct repository commit evidence and architectural work history."
+          }
+        },
+        {
+          "name": "TypeScript",
+          "status": "Verified",
+          "evidence": {
+            "resumeSnippet": "Implemented strongly-typed API gateways and client SDKs using TypeScript.",
+            "projectProof": "api-gateway (48 commits) & react-dashboard (96 commits)",
+            "rationale": "High commit volume across multiple verified repositories with strict TypeScript configurations."
+          }
+        }
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        {
+          "name": "Node.js",
+          "status": "Verified",
+          "evidence": {
+            "resumeSnippet": "Engineered low-latency microservices with Node.js and Express.",
+            "projectProof": "api-gateway repository (Node.js runtime, Express routing)",
+            "rationale": "Validated backend service architecture and active project code."
+          }
+        },
+        {
+          "name": "PostgreSQL",
+          "status": "Partially Verified",
+          "evidence": {
+            "resumeSnippet": "Integrated relational databases and optimized complex queries at DevSolutions.",
+            "projectProof": "Referenced in database schema migrations but lacks standalone benchmark repository.",
+            "rationale": "Mentioned in resume experience and schema definitions, but query optimization benchmarks are not yet linked."
+          }
+        },
+        {
+          "name": "Go",
+          "status": "Verified",
+          "evidence": {
+            "resumeSnippet": "Developed distributed Raft consensus nodes in Go.",
+            "projectProof": "raft-consensus (34 commits in Go, concurrent goroutine benchmarks)",
+            "rationale": "Directly supported by active open-source repository with unit and integration tests."
+          }
+        },
+        {
+          "name": "gRPC",
+          "status": "Partially Verified",
+          "evidence": {
+            "resumeSnippet": "Configured Protobuf serialization and gRPC streaming endpoints.",
+            "projectProof": "raft-consensus (Proto definitions present)",
+            "rationale": "Protobuf schemas detected; further service-to-service integration tests recommended."
+          }
+        }
+      ]
+    },
+    {
+      "category": "Infrastructure",
+      "items": [
+        {
+          "name": "Docker",
+          "status": "Verified",
+          "evidence": {
+            "resumeSnippet": "Containerized multi-stage microservice builds and local development environments.",
+            "projectProof": "Dockerfile and docker-compose.yml configurations present in api-gateway and raft-consensus",
+            "rationale": "Multi-stage Dockerfiles validated across linked codebases."
+          }
+        },
+        {
+          "name": "AWS",
+          "status": "Missing Evidence",
+          "evidence": {
+            "resumeSnippet": "Listed under certifications: AWS Certified Solutions Architect.",
+            "projectProof": "No linked Terraform or CloudFormation infrastructure code detected.",
+            "rationale": "Listed in resume credentials, but supporting cloud infrastructure repository evidence was not detected. Adding a Terraform or CDK repository will verify this skill."
+          }
+        },
+        {
+          "name": "Kubernetes",
+          "status": "Missing Evidence",
+          "evidence": {
+            "resumeSnippet": "Listed under certifications: Certified Kubernetes Administrator.",
+            "projectProof": "No Kubernetes manifest or Helm chart repositories connected.",
+            "rationale": "Certification is recognized, but manifest deployments are missing from repository evidence."
+          }
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Senior Full Stack Engineer",
+      "company": "TechCorp",
+      "period": "2023 - Present",
+      "evidenceStrength": "Strong",
+      "verifiedSkills": ["React", "Next.js", "Node.js", "TypeScript", "Redis"],
+      "responsibilities": [
+        "Architected real-time telemetry dashboards and microservices servicing 120,000+ daily active users.",
+        "Engineered distributed caching layer using Redis, reducing P99 latency from 450ms to 85ms.",
+        "Led cross-functional team of 6 engineers across sprint cycles and automated CI/CD pipeline deployments."
+      ],
+      "quantifiedAchievements": [
+        "40% reduction in database query latency",
+        "99.95% uptime maintained across production service fleets",
+        "Mentored 4 junior engineers on distributed systems design"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "role": "Software Engineer",
+      "company": "DevSolutions",
+      "period": "2021 - 2023",
+      "evidenceStrength": "Moderate",
+      "verifiedSkills": ["TypeScript", "React", "PostgreSQL", "Docker"],
+      "responsibilities": [
+        "Built responsive client-facing web portals and integrated OAuth 2.0 authentication workflows.",
+        "Refactored legacy REST APIs into modular endpoints with schema validation.",
+        "Configured containerized testing environments using Docker Compose."
+      ],
+      "quantifiedAchievements": [
+        "Decreased client onboarding friction by 25%",
+        "Achieved 88% unit test coverage across core billing modules"
+      ]
+    }
+  ],
+  "recommendations": {
+    "nextBestAction": {
+      "id": "rec-1",
+      "impact": "High",
+      "title": "Quantify operational outcomes in recent experience",
+      "description": "Your TechCorp experience lists responsibilities clearly, but adding concrete business metric outcomes will immediately improve recruiter conversion.",
+      "section": "Experience — TechCorp",
+      "originalText": "Architected real-time dashboards and microservices using React, Next.js, and Node.js.",
+      "recommendedText": "Architected real-time analytics dashboards using React and Next.js, increasing operational visibility by 35% and supporting 120k+ daily users.",
+      "rationale": "High-impact enterprise roles look for scale numbers (user counts, percentage improvements, latency gains) in primary experience bullet points."
+    },
+    "secondarySuggestions": [
+      {
+        "id": "rec-2",
+        "impact": "Medium",
+        "title": "Demonstrate PostgreSQL query optimization",
+        "description": "PostgreSQL is listed as a core database skill but lacks explicit indexing or migration details in project descriptions.",
+        "section": "Skills & Projects",
+        "originalText": "Integrated relational databases and optimized complex queries.",
+        "recommendedText": "Optimized PostgreSQL relational schemas and query indices, reducing query execution time by 42% on high-traffic reporting endpoints.",
+        "rationale": "Proves deep database performance proficiency rather than basic CRUD familiarity."
+      },
+      {
+        "id": "rec-3",
+        "impact": "Low",
+        "title": "Connect AWS infrastructure code evidence",
+        "description": "You hold an AWS certification; linking a repository with Terraform or CDK manifests will transition AWS to fully Verified status.",
+        "section": "Certifications & Infrastructure",
+        "originalText": "AWS Certified Solutions Architect",
+        "recommendedText": "AWS Certified Solutions Architect — Production IaC deployments using Terraform and ECS Fargate.",
+        "rationale": "Bridges the gap between theoretical certification and verifiable practical implementation."
+      }
+    ]
+  },
+  "versions": [
+    {
+      "id": "v3",
+      "label": "Resume — Aug 2026",
+      "date": "Aug 8, 2026",
+      "score": 88,
+      "atsScore": 91,
+      "targetAlignment": 92,
+      "status": "Current Active",
+      "changes": "Added Redis caching metrics, Raft consensus project evidence, and updated Next.js SSR architecture.",
+      "skillsDelta": {
+        "added": ["Go", "gRPC", "Redis"],
+        "removed": []
+      }
+    },
+    {
+      "id": "v2",
+      "label": "Resume — Jul 2026",
+      "date": "Jul 15, 2026",
+      "score": 83,
+      "atsScore": 87,
+      "targetAlignment": 85,
+      "status": "Archived",
+      "changes": "Initial parse with TechCorp experience and Docker containerization additions.",
+      "skillsDelta": {
+        "added": ["Docker", "TypeScript"],
+        "removed": ["jQuery"]
+      }
+    },
+    {
+      "id": "v1",
+      "label": "Resume — May 2026",
+      "date": "May 2, 2026",
+      "score": 77,
+      "atsScore": 81,
+      "targetAlignment": 76,
+      "status": "Archived",
+      "changes": "Baseline university graduate profile and DevSolutions entry.",
+      "skillsDelta": {
+        "added": ["React", "JavaScript", "HTML/CSS"],
+        "removed": []
+      }
+    }
+  ]
+}
